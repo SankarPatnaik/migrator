@@ -1,0 +1,10 @@
+source:
+  connection_string: mssql+pyodbc://user:pass@dsn
+
+target:
+  connection_string: oracle+cx_oracle://user:pass@host:1521/?service_name=orass
+
+tables:
+  - source_table: employees
+    target_table: employees
+    batch_size: 1000
